@@ -10,16 +10,20 @@ export const AddTransaction = () => {
       <h3 className="addTransac__header" >Add new transaction</h3>
       <form className="addTransac__form" >
         <div className="addTransac__form-control">
-          <label htmlfor="text">Text</label>
-          <input type="text"
+          <label className="addTransac__label"
+            htmlFor="text"  >Text</label>
+          <input className="addTransac__inputInfo"
+            type="text"
             placeholder="Enter text..."
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
         </div>
         <div className="addTransac__form-control">
-          <label htmlfor="amount"> Amount <br />(negative - expense, positive - income) </label>
-          <input type="number"
+          <label className="addTransac__label"
+            htmlFor="amount"> Amount <br />(negative - expense, positive - income) </label>
+          <input className="addTransac__inputInfo"
+            type="number"
             placeholder="Enter amount..."
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
