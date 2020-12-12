@@ -64,13 +64,22 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 2rem;
+  padding: 8rem;
+  height: 80vh;
+}
+
+.headerDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid aqua;
+  width: 100%;
 }
 
 .balance {
@@ -81,16 +90,56 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 1rem 0;
+  border: 1px solid lime;
 }
 
 .inc-exp-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 20px 0;
+  background-color: #fff;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  padding: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px dashed black;
+}
+
+.inc-exp-container:first-of-type {
+  border-right: 1px solid #dedede;
 }
 
 .inc-exp-container__minus-plusDiv {
   margin-right: 1rem;
+}
+
+.inc-exp-container__minus-plusDiv:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.inc-exp-container__money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.inc-exp-container__money--plus {
+  color: #2ecc71;
+}
+
+.inc-exp-container__money--minus {
+  color: #c0392b;
+}
+
+.inc-exp-container > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
 }
 
 .transac-List {
@@ -101,6 +150,75 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.transac-List__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin-bottom: 2.5rem;
+  border: 1px solid blue;
+}
+
+.transac-List__listItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bolder;
+  background-color: #fff;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  color: #333;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.transac-List__listItem:hover {
+  opacity: 1;
+}
+
+.transac-List__minus {
+  padding: 0.5rem;
+  border-right: 5px solid #c0392b;
+}
+
+.transac-List__delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.transac-List__delete-btn:hover {
+  opacity: 1;
+}
+
+.transac-List__delete-btn:focus {
+  outline: 0;
 }
 
 .addTransac {
@@ -111,5 +229,38 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border: 1px solid crimson;
+}
+
+.addTransac__label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.addTransac__inputInfo {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.addTransac__btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 1rem;
+  margin: 0.625rem 0 1.875rem;
+  padding: 0.625rem;
+  width: 100%;
+}
+
+.addTransac__btn:focus {
+  outline: 0;
 }
 /*# sourceMappingURL=App.css.map */
