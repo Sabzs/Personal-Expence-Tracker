@@ -17,7 +17,6 @@ export const AddTransaction = () => {
       amount: +amount //the "+amount" will make sure total is not added as a string//
     }
     addTransaction(newTransaction)
-
   }
 
 
