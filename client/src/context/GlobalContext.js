@@ -1,22 +1,27 @@
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useEffect, useReducer } from "react";
 import GlobalReducer from "./GlobalReducer";
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 
 
 //initial state
-const initialState = {
-  transactions: [
-    { id: uuidv4(), text: "Salary", amount: 400 },
-    { id: uuidv4(), text: "Book", amount: -20 },
-  ]
-}
+const initialState = { transactions: [] }
+
 
 //create context
 export const GlobalContext = createContext(initialState)
 
 //provider component
 export const GlobalContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(GlobalReducer, initialState);
+  const [state, dispatch] = useReducer(GlobalReducer, initialState, () => {
+    const localDATA = localStorage.getItem("transactions");
+    return localDATA ? JSON.parse(localDATA) : initialState;
+  });
+
+
+  useEffect(() => {
+    localStorage.setItem("transactions", JSON.stringify(state))
+  }, [state])
+
 
   //actions
   function deleteTransaction(id) {
