@@ -11,7 +11,7 @@
     padding: 0;
     margin-bottom: 2.5rem;
 
-    border: 1px solid blue;
+    // border: 1px solid blue;
   }
 
   &__listItem {
@@ -24,13 +24,10 @@
     box-shadow: var(--box-shadow);
     color: #333;
     position: relative;
-    padding: 10px;
+    // padding: 10px;
     margin: 10px 0;
-
-    &:hover {
-      opacity: 1;
-    }
   }
+
   &__minus {
     padding: 0.5rem;
     border-right: 5px solid #c0392b;
@@ -44,9 +41,9 @@
     font-size: 20px;
     line-height: 20px;
     padding: 2px 5px;
-    position: absolute; //
-    top: 50%; //
-    left: 0; //
+    position: absolute;
+    top: 50%;
+    left: 0;
     transform: translate(-100%, -50%);
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -54,14 +51,12 @@
     &:hover {
       opacity: 1;
     }
-
     &:focus {
       outline: 0;
     }
   }
 }
 
-// .minus {
-//   border: 1px dashed black;
-//   // border: 5px solid #c0392b;
+// .list li:hover .delete-btn {
+//   opacity: 1;
 // }

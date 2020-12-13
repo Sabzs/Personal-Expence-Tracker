@@ -4,23 +4,30 @@ import { Balance } from './components/Balance';
 import { Header } from './components/Header';
 import { IncomeExpence } from './components/IncomeExpence';
 import { TransactionList } from './components/TransactionList';
+import { GlobalContextProvider } from './context/GlobalContext';
+
+
 
 
 import './styles/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
 
-      <div className >
-        <Balance />
-        <IncomeExpence />
-        <TransactionList />
-        <AddTransaction />
+    <GlobalContextProvider>
+      <div className="App">
+        <Header />
+
+        <div className >
+          <Balance />
+          <IncomeExpence />
+          <TransactionList />
+          <AddTransaction />
+        </div>
       </div>
 
-    </div>
+    </GlobalContextProvider>
+
   );
 }
 

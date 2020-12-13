@@ -56,6 +56,10 @@ body {
   height: 100vh;
 }
 
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
 .App {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,7 +82,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid aqua;
   width: 100%;
 }
 
@@ -91,7 +94,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 1rem 0;
-  border: 1px solid lime;
 }
 
 .inc-exp-container {
@@ -106,7 +108,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px dashed black;
 }
 
 .inc-exp-container:first-of-type {
@@ -163,7 +164,6 @@ body {
           flex-direction: column;
   padding: 0;
   margin-bottom: 2.5rem;
-  border: 1px solid blue;
 }
 
 .transac-List__listItem {
@@ -182,12 +182,7 @@ body {
           box-shadow: var(--box-shadow);
   color: #333;
   position: relative;
-  padding: 10px;
   margin: 10px 0;
-}
-
-.transac-List__listItem:hover {
-  opacity: 1;
 }
 
 .transac-List__minus {
@@ -229,7 +224,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1px solid crimson;
 }
 
 .addTransac__label {
