@@ -6,10 +6,9 @@ import { IncomeExpence } from './components/IncomeExpence';
 import { TransactionList } from './components/TransactionList';
 import { GlobalContextProvider } from './context/GlobalContext';
 
-
-
-
 import './styles/App.css';
+
+
 
 function App() {
   return (
