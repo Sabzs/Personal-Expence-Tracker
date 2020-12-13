@@ -166,7 +166,8 @@ body {
   margin-bottom: 2.5rem;
 }
 
-.transac-List__listItem {
+.transac-List .minus,
+.transac-List .plus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,9 +186,16 @@ body {
   margin: 10px 0;
 }
 
-.transac-List__minus {
-  padding: 0.5rem;
+.transac-List .minus {
   border-right: 5px solid #c0392b;
+}
+
+.transac-List .plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.transac-List__span {
+  padding: 0.5rem;
 }
 
 .transac-List__delete-btn {

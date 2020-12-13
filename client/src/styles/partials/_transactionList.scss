@@ -14,7 +14,8 @@
     // border: 1px solid blue;
   }
 
-  &__listItem {
+  .minus,
+  .plus {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,10 +28,16 @@
     // padding: 10px;
     margin: 10px 0;
   }
-
-  &__minus {
-    padding: 0.5rem;
+  .minus {
     border-right: 5px solid #c0392b;
+  }
+  .plus {
+    border-right: 5px solid #2ecc71;
+  }
+
+  &__span {
+    padding: 0.5rem;
+    // border-right: 5px solid #c0392b;
   }
 
   &__delete-btn {
