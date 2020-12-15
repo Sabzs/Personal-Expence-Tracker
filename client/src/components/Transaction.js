@@ -13,7 +13,7 @@ export const Transaction = ({ transaction }) => {
     <li className={transaction.amount < 0 ? "minus" : "plus"}>
       {transaction.text}
       <span className="transac-List__span" >{sign}${numberWithCommas(Math.abs(transaction.amount))}  </span>
-      <button className="transac-List__delete-btn" onClick={() => deleteTransaction(transaction._id)} >x</button>
+      <button className="transac-List__delete-btn" onClick={() => deleteTransaction(transaction.id)} >x</button>
 
     </li>
   )
