@@ -81,7 +81,7 @@ export const GlobalContextProvider = (props) => {
       deleteTransaction,
       addTransaction
     }}>
-      { props.children}
+      {props.children}
     </GlobalContext.Provider>
   );
 
