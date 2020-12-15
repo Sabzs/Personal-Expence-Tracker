@@ -12,21 +12,21 @@ import './styles/App.css';
 
 function App() {
   return (
+    <>
+      <GlobalContextProvider>
+        <div className="App">
+          <Header />
 
-    <GlobalContextProvider>
-      <div className="App">
-        <Header />
-
-        <div className >
-          <Balance />
-          <IncomeExpence />
-          <TransactionList />
-          <AddTransaction />
+          <div className >
+            <Balance />
+            <IncomeExpence />
+            <TransactionList />
+            <AddTransaction />
+          </div>
         </div>
-      </div>
 
-    </GlobalContextProvider>
-
+      </GlobalContextProvider>
+    </>
   );
 }
 
